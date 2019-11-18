@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+    <title>Email Database</title>
+  </head>
+
+  <body>
+    <div class="email-heading">
+      <div class="email-list">
+        <div>Email Address</div>
+        <div>
+          <input type="text" id="emailInput" />
+        </div>
+        <div>
+          <button class="add-Btn" type="submit" onclick="addEmailId()">
+            Add
+          </button>
+        </div>
+      </div>
+      <div class="email-list">
+        <div class="mainSearchField">
+          <div class="searchEmail">
+            <input type="text" id="searchText" value="Search" disabled /><input type="text" id="emailSearch"/>
+            <input class="go-Btn" type="button" value="Go!" onclick="searchEmailId()"/>
+          </div>
+        </div>
+        <label class="container">
+          <b>Show Only Enabled</b>
+          <input type="checkbox" name="showEnabled" value="email" id="emailShow" onclick="showOnlyEnable()"/>
+          <span class="checkmark"></span>
+        </label>
+        <table id="email-Database">
+          <tr class="title">
+            <th>IsEnabled</th>
+            <th>Email</th>
+            <th>Delete</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

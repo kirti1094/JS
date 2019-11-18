@@ -1,0 +1,246 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #393737;
+}
+
+b {
+  color: #514e4e;
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  color: #514e4e;
+}
+
+td,
+th {
+  border: 2px solid #dddddd;
+  text-align: left;
+  padding: 10px;
+}
+
+tbody:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tr th {
+  border-left: 0;
+  border-right: 0;
+}
+
+table tr td {
+  border-left: 0;
+  border-right: 0;
+  word-break: break-word;
+}
+
+.email-heading {
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+.email-list {
+  float: left;
+  padding-left: 10px;
+  padding-top: 20px;
+  width: 50%;
+}
+
+.email-list > div {
+  padding: 5px;
+}
+
+.email-addressHeading {
+  font-size: 24px;
+  color: #000;
+  padding-top: 60px;
+}
+
+#emailInput {
+  width: 80%;
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.add-Btn {
+  background-color: #0a99ff;
+  width: 25%;
+  border-width: 0;
+  padding: 10px 10px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#emailSearch {
+  -webkit-appearance: none !important;
+  border: 2px solid #f3f3f3;
+  border-left: 0px;
+  outline: none;
+  width: 65%;
+  border-width: 1.5px;
+}
+
+#emailShow {
+  margin-bottom: 25px;
+}
+
+.mainSearchField {
+  display: table;
+  margin: 4px;
+  padding: 1px;
+  width: 80%;
+  margin-bottom: 25px;
+}
+
+.searchEmail > input {
+  padding: 10px;
+}
+
+.go-Btn {
+  border-width: 1px;
+  background-color: #0a99ff;
+  border-radius: 0px 5px 5px 0px;
+  margin: 0 0 0 -6px;
+  border: 1px solid #f3f3f3;
+  cursor: pointer;
+  min-height: 40px;
+  color: #fff;
+  font-size: 14px;
+}
+
+div.searchEmail {
+  display: table-cell;
+  width: 100%;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 2px;
+  left: 10px;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border: 1px solid #a59999;
+  border-radius: 3px;
+}
+
+.container:input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.container input:checked[disabled] ~ .checkmark {
+  background-color: #b7bfc5;
+}
+
+.onlymainCheckbox {
+  top: 5px !important;
+  left: 40%;
+  background-color: #fff;
+}
+
+input[type="text"]#searchText {
+  -webkit-appearance: none !important;
+  color: #514e4e;
+  text-align: center;
+  width: 85px;
+  border: 1px solid #f3f3f3;
+  border-right: 0;
+  margin: 0px -2px 0 0px;
+  background: #f3f3f3;
+  border-radius: 5px 0px 0px 5px;
+  border-width: 1px;
+  font-size: 14px;
+}
+
+td:first-child,
+td:last-child,
+th:first-child,
+th:last-child {
+  max-width: 100px;
+  text-align: center;
+  min-width: 80px;
+}
+
+.fa-trash:hover {
+  color: red;
+}
+
+i.fa.fa-trash {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .email-list {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  #emailSearch {
+    width: 45%;
+  }
+}
+
